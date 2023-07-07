@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1 id="title"><a href="../index.html">MAIN CODE</a></h1>
+        <p id="subtext">Let's learn Java together</p>
+        <nav id="social">
+            <a href="../index.html">POSTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="https://www.facebook.com/maincodessg104" target="_blank">FACEBOOK</a>
+            <a href="https://github.com/" target="_blank">GITHUB</a>
+        </nav>
+        <hr>
+    </header>
+    <main id="article">
+        <i>(08/06/2023)</i>
+        <h2 id="post_title">Encapsulation (Part 2)</h2>
+        <p>🔰 Tiếp nối bài viết về tính chất Đóng gói - Encapsulation, hôm nay, chúng ta sẽ cùng tìm hiểu cụ thể về những thành phần quan trọng giúp đảm bảo tính đóng gói trong Java nhé!</p>
+        <p>Bài viết này sẽ trình bày cụ thể về Access Modifier và Getter, Setter:</p>
+        <p>===============================</p>
+        <p><b>📍 Access Modifier:</b></p>
+        <img alt="access modifier" src="encap2access.jpg">
+        <p>Access Modifer trong Java xác định phạm vi truy cập của biến, phương thức hoặc lớp.</p>
+        <p>Trong Java, có 4 phạm vi truy cập chính như sau:</p>
+        <p>- private (-): chỉ được truy cập trong phạm vi lớp.</p>
+        <p>- default: trường hợp mặc định khi bạn không khai báo access modifier kèm theo, chỉ được phép truy cập trong cùng package.</p>
+        <p>- protected (#): truy cập bên trong package và package kế thừa. Có thể được áp dụng cho biến, phương thức, constructor, không thể áp dụng cho lớp.</p>
+        <p>- public (+): được truy cập ở mọi nơi. </p>
+        <p>Để dễ hình dung, chúng ta có thể liên hệ qua “đối tượng hiển thị” của bài post của bạn trên Facebook. “Chỉ mình tôi" sẽ tương tự như “private", “Công khai” tương đương với “public"...</p>
+        <p><b>📍 Getter và Setter:</b></p>
+        <img alt="getter" src="encap2getter.jpg">
+        <img alt="setter" src="encap2setter.jpg">
+        <p>Getter và Setter là hai phương thức dùng để truy cập, thay đổi giá trị của một thuộc tính cụ thể, đảm bảo tính đóng gói trong Java.</p>
+        <p>- Getter được dùng để lấy giá trị của thuộc tính.</p>
+        <p>- Setter được dùng để cập nhật giá trị cho các thuộc tính.</p>
+        <p>Lấy ví dụ chiếc ví của chính bạn, người khác không thể tuỳ tiện sử dụng chiếc ví ấy.</p>
+        <p>Nếu ai đó muốn biết số dư trong ví của bạn, họ sẽ yêu cầu giá trị của biến "số dư" bằng cách sử dụng một getter. Bằng hàm getter, bạn sẽ mở ví của mình, kiểm tra số tiền và sau đó thông báo giá trị cho họ.</p>
+        <p>Tương tự, nếu ai đó muốn thay đổi số tiền trong ví bạn (mượn tiền hay cho bạn thêm tiền), họ sẽ cung cấp cho bạn giá trị mới. Bạn sẽ lắng nghe những gì họ nói và cập nhật biến "số dư" tương ứng, cập nhật số tiền mới.</p>
+        <p>Vì vậy, sử dụng Getter, Setter sẽ đảm bảo tính toàn vẹn của dữ liệu. </p>
+        <p>Khi thiết lập hàm Setter, các bạn còn có thể thêm những điều kiện ràng buộc để validate dữ liệu theo những điều kiện cụ thể. </p>
+    </main>
+</body>
+</html>

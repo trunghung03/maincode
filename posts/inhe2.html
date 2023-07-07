@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1 id="title"><a href="../index.html">MAIN CODE</a></h1>
+        <p id="subtext">Let's learn Java together</p>
+        <nav id="social">
+            <a href="../index.html">POSTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="https://www.facebook.com/maincodessg104" target="_blank">FACEBOOK</a>
+            <a href="https://github.com/" target="_blank">GITHUB</a>
+        </nav>
+        <hr>
+    </header>
+    <main id="article">
+        <i>(15/06/2023)</i>
+        <h2 id="post_title">Inheritance (Part 2)</h2>
+        <p>🔰 Tiếp nối phần 1 của Tính kế thừa, hôm nay Main Code sẽ trình bày ví dụ cụ thể để các bạn dễ hình dung về tính chất này trong Lập trình hướng đối tượng với Java nhé!</p>
+        <p>⭐ Chi tiết nội dung mời các bạn theo dõi qua từng hình ảnh dưới đây 👇</p>
+        <img alt="Inheritance" src="inhe2.jpg">
+        <p></p>
+        <p>🐶 Như các bạn đã biết, khi class Dog kế thừa class Animal, Dog sẽ tự động có toàn bộ những thuộc tính và phương thức đã được định nghĩa trong Animal.</p>
+        <p></p>
+        <p>🐶 Tuy nhiên, chúng ta còn có thể tạo thêm những thuộc tính, phương thức riêng cho lớp con. Ở đây, lớp Dog có một phương thức riêng là bark() để in ra thông báo "I can bark".</p>
+        <p></p>
+        <p>🐶 Không chỉ định nghĩa thêm, ta còn có thể định nghĩa lại phương thức có sẵn trong lớp cha. Trong ví dụ này, Dog có cách ăn khác với Animal nói chung. Nó ghi đè phương thức eat() và định nghĩa lại để in ra thông báo "I eat dog food".</p>
+        <p></p>
+        <p>Kế thừa đa cấp (multi-level inheritance)</p>
+        <img alt="Inheritance" src="inhe2multi.jpg">
+        <p></p>
+        <p>🐶 Ví dụ mình sẽ có thêm class VietDog là để nói về những giống chó ở nước ta. Thì VietDog sẽ extends từ Dog, và Dog extends từ Animal.</p>
+        <p></p>
+        <p>🐶 Điều này có nghĩa là lớp VietDog cũng sẽ có tất cả các thuộc tính và phương thức từ cả lớp Dog và lớp Animal.</p>
+        <p></p>
+        <p>Kế thừa phân cấp (Hierarchical Inheritance)</p>
+        <img alt="Inheritance" src="inhe2hier.jpg">
+        <p></p>
+        <p>🐶 Trong Java, một class con không thể extends từ nhiều class cha, nhưng 1 class cha có thể có nhiều class con, kế thừa phân cấp là như vậy đấy!</p>
+        <p>🐶 Tiếp tục với những loài chó, thì VietDog, AmericaDog, JapanDog chính là những class con cùng kế thừa class Dog và tạo thành mô hình kế thừa phân cấp:</p>
+        <p></p>
+        <p>🔰Tóm tắt một số từ khoá về kế thừa mà bạn cần nhớ:</p>
+        <img alt="Inheritance" src="inhe2keyt.jpg">
+        <p></p>
+        <p>📌 extends: Từ khóa để chỉ sự kế thừa, cho phép một lớp con kế thừa các thuộc tính và phương thức của một lớp cha.</p>
+        <p></p>
+        <p>📌 super: Từ khóa để tham chiếu đến lớp cha gần nhất hoặc gọi phương thức của lớp cha.</p>
+        <p></p>
+        <p>📌 is-a: Mối quan hệ giữa hai lớp, trong đó một lớp được coi là một phiên bản cụ thể của lớp khác.</p>
+        <p>Notice: Cần phân biệt rõ is-a với has-a. Vì has-a là mối quan hệ giữa hai lớp, trong đó một lớp chứa một thành phần của lớp khác như một thuộc tính.</p>
+        <p></p>
+        <p>📌 Overriding: quá trình cung cấp một triển khai khác cho một phương thức đã được định nghĩa trong lớp cha. Nó cho phép một lớp con cung cấp sự thực hiện riêng của nó đối với một phương thức kế thừa từ lớp cha.</p>
+    </main>
+</body>
+</html>

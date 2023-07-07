@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Code</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1 id="title"><a href="../index.html">MAIN CODE</a></h1>
+        <p id="subtext">Let's learn Java together</p>
+        <nav id="social">
+            <a href="../index.html">POSTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="https://www.facebook.com/maincodessg104" target="_blank">FACEBOOK</a>
+            <a href="https://github.com/" target="_blank">GITHUB</a>
+        </nav>
+        <hr>
+    </header>
+    <main id="article">
+        <i>(18/06/2023)</i>
+        <h2 id="post_title">Polymorphism (Final Part)</h2>
+        <p>  🎯Chúc mừng các bạn đã đi đến chặng đường cuối về sơ lược OOP của chúng mình. </p>
+        <p>  🔍Cùng Main Code chúng mình tìm hiểu về:</p>
+        <p>         🚩Áp dụng đa hình trong java</p>
+        <p>    📒 Đa hình cho phép thực hiện các hành động khác nhau dựa trên các đối tượng cụ thể. Đa hình cho phép chúng ta định nghĩa một interface – khuôn mẫu và  nhiều implement khác nhau. Như ví dụ ở trên chúng ta thấy Animal có method mẫu là sound() và các implement sound() của 2 class Dog và Cat. </p>
+        <p>   🔍Chúng ta có các kiểu đa hình:</p>
+        <p>      📌Đa hình compile time - Method Overloading</p>
+        <p>      📌Đa hình runtime - Method Overrding</p>
+        <p>Nguồn: </p>
+        <div class="inlink">
+            <p><a href="https://shareprogramming.net/da-hinhpolymorphism-trong-java/">https://shareprogramming.net/da-hinhpolymorphism-trong-java/</p>
+            <p><a href="https://www.edureka.co/blog/upcasting-and-downcasting-in-java/">https://www.edureka.co/blog/upcasting-and-downcasting-in-java/</a></p>
+            <p><a href="https://gpcoder.com/2386-tinh-da-hinh-polymorphism-trong-java/">https://gpcoder.com/2386-tinh-da-hinh-polymorphism-trong-java/</a></p>
+        </div>
+        <p></p>
+        <p>🚩Đa hình compile time</p>
+        <img alt="Polymorphism" src="poly4comp.jpg">
+        <p></p>
+        <p>📖 Đa hình được giải quyết tại thời biên dịch được gọi là đa hình tại compile time. Method Overloading là một ví dụ điển hình.</p>
+        <p></p>
+        <p>🔍Method Overloading: Cho phép chúng ta có nhiều phương thức cùng tên nhưng khác nhau về số lượng và kiểu dữ liệu của các tham số đầu vào.</p>
+        <p></p>
+        <p>🔍 Chúng ta có 3 phương thức add(), việc chúng ta sử dụng hàm nào là tùy thuộc vào các tham số và được xác định tại thời điểm compile time.</p>
+        <p></p>
+        <p>🚩Đa hình tại runtime</p>
+        <img alt="Polymorphism" src="poly4run.jpg">
+        <p></p>
+        <p>📖 Đa hình tại runtime là một quá trình xử lý gọi method được ghi đè tại thời điểm chạy chương trình.</p>
+        <p>🔍Method Overrding: Cho phép chúng ta định nghĩa lại method của class con mà trước đó nó đã được định nghĩa ở class cha.</p>
+        <p></p>
+        <p>🔍Chúng ta sẽ bàn luận lại ví dụ ở đầu bài</p>
+        <p></p>
+        <p>🚩Class Animal đã được định nghĩa method sound().</p>
+        <img alt="Polymorphism" src="poly4anim.jpg">
+        <p></p>
+        <p>🎯 Anotation @Override được đặt trước các method có ý nghĩa rằng method này đã được định nghĩa ở parent class, nếu các bạn không muốn sử dụng thì các bạn có thể implement lại cũng được.</p>
+     </main>
+</body>
+</html>

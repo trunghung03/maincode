@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1 id="title"><a href="../index.html">MAIN CODE</a></h1>
+        <p id="subtext">Let's learn Java together</p>
+        <nav id="social">
+            <a href="../index.html">POSTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="https://www.facebook.com/maincodessg104" target="_blank">FACEBOOK</a>
+            <a href="https://github.com/" target="_blank">GITHUB</a>
+        </nav>
+        <hr>
+    </header>
+    <main id="article">
+        <i>(18/06/2023)</i>
+        <h2 id="post_title">Polymorphism (Part 3)</h2>
+        <p>🔰Tiếp nối bài viết về tính đa hình trong java thì hôm nay mình sẽ giới thiệu cho các bạn về 2 keywords đầu tiên là Upcasting và Downcasting.</p>
+        <p>🧑‍💻 Cơ chế Upcasting và Downcasting trong java là gì?</p>
+        <p> Tại sao lại cần Upcasting và Downcasting?</p>
+        <img alt="Polymorphism" src="poly3vd.jpg">
+        <p>📍Cơ chế Upcasting và Downcasting trong java:</p>
+        <img alt="Polymorphism" src="poly3apple.jpg">
+        <p>  -  Upcasting là gán object của subclass cho biến tham chiếu supperclass, trong khi Downcasting gán object của supperclass cho biến tham chiếu subclass.</p>
+        <p>  -  Khi thực hiện downcasting chúng ta cần kiểm tra kiểu dữ liệu của object trước khi gán giá trị để tránh lỗi ClassCastException.</p>
+        <p></p>
+        <p>  📍Tại sao cần Upcasting.</p>
+        <img alt="Polymorphism" src="poly3why.jpg">
+        <p>Upcasting được sử dụng nhiều trong tính đa hình lập trình hướng đối tượng, một biến kiểu dữ liệu supperclass có thể tham chiếu đến tất cả các object subclass.</p>
+        <p></p>
+        <p>Sử dụng tính chất này chúng ta không phải khai báo kiểu dữ liệu cụ thể cho các object subclass class.</p>
+        <p></p>
+        <p>📍Tại sao cần Downcasting.</p>
+        <img alt="Polymorphism" src="poly3whydown.jpg">
+        <p>Sử dụng downcasting khi chúng ta cần sử dụng các tính chất riêng của subclass mà ở supperclass không có.</p>
+        <p></p>
+        <p>Ví dụ Orange class định nghĩa thêm 1 method count() trả về số lượng orange còn trong kho.</p>
+        <p></p>
+        <p>Khỏi tạo printName() method xuất tên của Fruit object từ tham số đầu vào, nếu là Orange thì xuất luôn số lượng.</p>
+     </main>
+</body>
+</html>

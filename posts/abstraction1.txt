@@ -1,0 +1,98 @@
+[ABSTRACTION - Part 1]
+🔰Sau 2 bài viết về tính chất đầu tiên trong OOP là tính đóng gói, Main Code xin giới thiệu mọi người tới tính chất thứ 2 của OOP là Abstraction aka Tính trừu tượng.
+🧑‍💻Tính trừu tượng là một trong những tính chất quan trọng trong OOP mà developer. Vậy: 
+Tính Trừu tượng(Abstraction) là gì?
+Mục đích sử dụng của tính trừu tượng trong Java? 
+============================
+Tính trừu tượng dùng để chỉ quá trình ẩn việc triển khai thực tế của một ứng dụng khỏi người dùng. Thay vào đó, lập trình viên chỉ nhấn mạnh vào cách sử dụng ứng dụng.
+📍Vậy mục đích khi sử dụng tính trừu tượng là gì? :
+Thông qua Tính trừu tượng, lập trình viên có thể ẩn tất cả dữ liệu hoặc quy trình không liên quan của ứng dụng. Đối với người dùng, đó chỉ là những chi tiết không cần thiết. Từ đó, ta có thể để giảm độ phức tạp và tăng hiệu quả sử dụng của phần mềm.
+📍Ý nghĩa cũng như lợi ích của việc sử dụng tính trừu tượng aka abstraction là gì?
+Một số lợi ích của Tính trừu tượng có thể kể đến là:
+- Giao diện người dùng đơn giản, cấp cao.
+- Các đoạn mã phức tạp bị ẩn đi.
+- Nâng cao vấn đề bảo mật, bảo vệ dự liệu không bị lộ.
+- Việc bảo trì phần mềm dễ dàng hơn.
+- Việc cập nhật hay thay đổi mã sẽ rất ít khi ảnh hưởng đến Tính trừu tượng.
+📍Bọn mình có một số minh họa về tính trừu tượng để các bạn có thể hiểu hơn về tính chất này:
+A. Tính trừu tượng trong đời sống:
+Một chiếc xe hoạt động cần rất nhiều bộ phận bên trong làm việc, nhưng tất cả những thông tin đó không cần thiết với người lái. Người lái chỉ cần sử dụng những công cụ như: bàn đạp ga, phanh, vô lăng, đèn nháy. Các kỹ thuật phức tạp đều được ẩn khỏi trình điều khiển.Nghĩa là bạn chỉ cần biết cách lái xe, chứ không cần quan tâm những chi tiết về cách thức động cơ hoạt động.
+B. Tính trừu tượng trong OOP:
+Là chỉ nêu ra vấn đề mà không hiển thị cụ thể, chỉ hiện thị tính năng thiết yếu đối với đối tượng người dùng mà không nói quy trình hoạt động. 
+Như vậy, tính trừu tượng là che giấu thông tin thực hiện từ người dùng, họ chỉ biết tính năng được cung cấp: Chỉ biết thông tin đối tượng thay vì cách nó sử dụng như thế nào. Nhắc lại có những ưu điểm sau:
+- Cho phép lập trình viên bỏ qua những phức tạp trong đối tượng mà chỉ đưa ra những khái niệm phương thức và thuộc tính cần thiết. Ta sẽ dựa những khái niệm đó để viết ra, nâng cấp và bảo trì.
+- Nó giúp ta tập trung cái cốt lõi đối tượng. Giúp người dùng không quên bản chất đối tượng đó làm gì.
+VD:
+Lập trình viên được yêu cầu triển khai chức năng cho phép gửi email cho khách hàng khi phát sinh biến động về tài chính trong tài khoản cá nhân. Ai đó ngay lập tức tạo class Email với phương thức sendEmail() nhằm hiện thực hoá chức năng này trong vòng 30 phút.
+public void sendEmail(string email, string content...)
+Một thời gian sau, chúng tôi được yêu cầu tiếp tục triển khai thêm chức năng gửi SMS vào luồng xử lý hiện tại. Một vài người đề xuất tạo thêm phương thức sendSMS() vào class Email đang có (wtf, tống một phương thức gửi SMS và object Email?). Có vẻ ai cũng nhận ra đó là một ý tưởng tồi, và họ quyết định tạo class SMS mới với phương thức sendSMS().
+public void sendSMS(string phoneNumber, string content...)
+==> Phương pháp giải quyết: 
+Bất cứ lập trình viên nào hiểu biết về OOP đều có thể nhận thức được rằng, tất cả những gì nên được tạo ra là class Sender với phương thức sendMessage(), nhưng không nhiều người nhận ra ý tưởng đó ngay từ những bước thiết kế đầu tiên.
+Sai lầm phổ biến trong design hệ thống là người ta quá tin tưởng và những gì mình biết và khẳng định sẽ không có sự thay đổi. Nhưng không! chúng ta không hiểu rõ như chúng ta tưởng.
+📍Vậy thì có mấy loại trừu tượng trong OOP?
+==> Các loại hình trừu tượng trong OOP
+1. Trừu tượng hóa dữ liệu(data abstraction):
+Khi dữ liệu của đối tượng không hiển thị ra bên ngoài, thì đó gọi là Trừu tượng hóa dữ liệu. Nếu cần, lập trình viên có thể cấp quyền truy cập vào dữ liệu của đối tượng bằng nhiều cách. Thông thường họ sử dụng một số phương thức, chẳng hạn như get, set.
+2. Trừu tượng hóa quy trình(process abstraction):
+Lập trình viên không cần phải cung cấp chi tiết về tất cả các chức năng khác nhau của một đối tượng. Khi họ ẩn việc triển khai nội bộ của các chức năng liên quan đến hoạt động của người dùng, đó gọi là Trừu tượng hóa quy trình.
+
+<!-- HTML Codes by Quackit.com -->
+<!DOCTYPE html>
+<title>Text Example</title>
+<style>
+div.container {
+background-color: #ffffff;
+}
+div.container p {
+font-family: Arial;
+font-size: 14px;
+font-style: normal;
+font-weight: normal;
+text-decoration: none;
+text-transform: none;
+color: #000000;
+background-color: #ffffff;
+}
+</style>
+
+<div class="container">
+<p>[ABSTRACTION - Part 1]</p>
+<p>🔰Sau 2 bài viết về tính chất đầu tiên trong OOP là tính đóng gói, Main Code xin giới thiệu mọi người tới tính chất thứ 2 của OOP là Abstraction aka Tính trừu tượng.</p>
+<p>🧑‍💻Tính trừu tượng là một trong những tính chất quan trọng trong OOP mà developer. Vậy: </p>
+<p>Tính Trừu tượng(Abstraction) là gì?</p>
+<p>Mục đích sử dụng của tính trừu tượng trong Java? </p>
+<p>============================</p>
+<p>Tính trừu tượng dùng để chỉ quá trình ẩn việc triển khai thực tế của một ứng dụng khỏi người dùng. Thay vào đó, lập trình viên chỉ nhấn mạnh vào cách sử dụng ứng dụng.</p>
+<p>📍Vậy mục đích khi sử dụng tính trừu tượng là gì? :</p>
+<p>Thông qua Tính trừu tượng, lập trình viên có thể ẩn tất cả dữ liệu hoặc quy trình không liên quan của ứng dụng. Đối với người dùng, đó chỉ là những chi tiết không cần thiết. Từ đó, ta có thể để giảm độ phức tạp và tăng hiệu quả sử dụng của phần mềm.</p>
+<p>📍Ý nghĩa cũng như lợi ích của việc sử dụng tính trừu tượng aka abstraction là gì?</p>
+<p>Một số lợi ích của Tính trừu tượng có thể kể đến là:</p>
+<p>- Giao diện người dùng đơn giản, cấp cao.</p>
+<p>- Các đoạn mã phức tạp bị ẩn đi.</p>
+<p>- Nâng cao vấn đề bảo mật, bảo vệ dự liệu không bị lộ.</p>
+<p>- Việc bảo trì phần mềm dễ dàng hơn.</p>
+<p>- Việc cập nhật hay thay đổi mã sẽ rất ít khi ảnh hưởng đến Tính trừu tượng.</p>
+<p>📍Bọn mình có một số minh họa về tính trừu tượng để các bạn có thể hiểu hơn về tính chất này:</p>
+<p>A. Tính trừu tượng trong đời sống:</p>
+<p>Một chiếc xe hoạt động cần rất nhiều bộ phận bên trong làm việc, nhưng tất cả những thông tin đó không cần thiết với người lái. Người lái chỉ cần sử dụng những công cụ như: bàn đạp ga, phanh, vô lăng, đèn nháy. Các kỹ thuật phức tạp đều được ẩn khỏi trình điều khiển.Nghĩa là bạn chỉ cần biết cách lái xe, chứ không cần quan tâm những chi tiết về cách thức động cơ hoạt động.</p>
+<p>B. Tính trừu tượng trong OOP:</p>
+<p>Là chỉ nêu ra vấn đề mà không hiển thị cụ thể, chỉ hiện thị tính năng thiết yếu đối với đối tượng người dùng mà không nói quy trình hoạt động. </p>
+<p>Như vậy, tính trừu tượng là che giấu thông tin thực hiện từ người dùng, họ chỉ biết tính năng được cung cấp: Chỉ biết thông tin đối tượng thay vì cách nó sử dụng như thế nào. Nhắc lại có những ưu điểm sau:</p>
+<p>- Cho phép lập trình viên bỏ qua những phức tạp trong đối tượng mà chỉ đưa ra những khái niệm phương thức và thuộc tính cần thiết. Ta sẽ dựa những khái niệm đó để viết ra, nâng cấp và bảo trì.</p>
+<p>- Nó giúp ta tập trung cái cốt lõi đối tượng. Giúp người dùng không quên bản chất đối tượng đó làm gì.</p>
+<p>VD:</p>
+<p>Lập trình viên được yêu cầu triển khai chức năng cho phép gửi email cho khách hàng khi phát sinh biến động về tài chính trong tài khoản cá nhân. Ai đó ngay lập tức tạo class Email với phương thức sendEmail() nhằm hiện thực hoá chức năng này trong vòng 30 phút.</p>
+<p>public void sendEmail(string email, string content...)</p>
+<p>Một thời gian sau, chúng tôi được yêu cầu tiếp tục triển khai thêm chức năng gửi SMS vào luồng xử lý hiện tại. Một vài người đề xuất tạo thêm phương thức sendSMS() vào class Email đang có (wtf, tống một phương thức gửi SMS và object Email?). Có vẻ ai cũng nhận ra đó là một ý tưởng tồi, và họ quyết định tạo class SMS mới với phương thức sendSMS().</p>
+<p>public void sendSMS(string phoneNumber, string content...)</p>
+<p>==> Phương pháp giải quyết: </p>
+<p>Bất cứ lập trình viên nào hiểu biết về OOP đều có thể nhận thức được rằng, tất cả những gì nên được tạo ra là class Sender với phương thức sendMessage(), nhưng không nhiều người nhận ra ý tưởng đó ngay từ những bước thiết kế đầu tiên.</p>
+<p>Sai lầm phổ biến trong design hệ thống là người ta quá tin tưởng và những gì mình biết và khẳng định sẽ không có sự thay đổi. Nhưng không! chúng ta không hiểu rõ như chúng ta tưởng.</p>
+<p>📍Vậy thì có mấy loại trừu tượng trong OOP?</p>
+<p>==> Các loại hình trừu tượng trong OOP</p>
+<p>1. Trừu tượng hóa dữ liệu(data abstraction):</p>
+<p>Khi dữ liệu của đối tượng không hiển thị ra bên ngoài, thì đó gọi là Trừu tượng hóa dữ liệu. Nếu cần, lập trình viên có thể cấp quyền truy cập vào dữ liệu của đối tượng bằng nhiều cách. Thông thường họ sử dụng một số phương thức, chẳng hạn như get, set.</p>
+<p>2. Trừu tượng hóa quy trình(process abstraction):</p>
+<p>Lập trình viên không cần phải cung cấp chi tiết về tất cả các chức năng khác nhau của một đối tượng. Khi họ ẩn việc triển khai nội bộ của các chức năng liên quan đến hoạt động của người dùng, đó gọi là Trừu tượng hóa quy trình.</p>
+</div>
